@@ -1,0 +1,8 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\system.obj",
+".\Objects\bsp_line.obj",
+".\Objects\S_TouchKeyCFG.obj",
+"..\touch_lib\SC92F8X7X_HighReliability_Lib_T1_V0.0.1.LIB" 
+TO ".\Objects\HX90TU" 
+PRINT(".\Listings\HX90TU.m51") RAMSIZE(256) 
