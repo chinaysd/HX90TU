@@ -1,1 +1,1 @@
-"..\user\system.c" OPTIMIZE (8,SPEED) BROWSE INCDIR(..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib) DEBUG OBJECTEXTEND PRINT(.\Listings\system.lst) OBJECT(.\Objects\system.obj)
+"..\user\system.c" OPTIMIZE (8,SPEED) BROWSE INCDIR(..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib;..\TimeOut) DEBUG OBJECTEXTEND PRINT(.\Listings\system.lst) OBJECT(.\Objects\system.obj)

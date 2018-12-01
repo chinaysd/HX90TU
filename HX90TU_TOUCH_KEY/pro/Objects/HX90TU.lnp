@@ -2,6 +2,8 @@
 ".\Objects\main.obj",
 ".\Objects\system.obj",
 ".\Objects\bsp_line.obj",
+".\Objects\bsp_timer.obj",
+".\Objects\TimeOut.obj",
 ".\Objects\S_TouchKeyCFG.obj",
 "..\touch_lib\SC92F8X7X_HighReliability_Lib_T1_V0.0.1.LIB" 
 TO ".\Objects\HX90TU" 

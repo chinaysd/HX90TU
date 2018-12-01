@@ -1,1 +1,1 @@
-"..\touch_lib\S_TouchKeyCFG.C" OPTIMIZE (8,SPEED) BROWSE INCDIR(..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib) DEBUG OBJECTEXTEND PRINT(.\Listings\S_TouchKeyCFG.lst) OBJECT(.\Objects\S_TouchKeyCFG.obj)
+"..\touch_lib\S_TouchKeyCFG.C" OPTIMIZE (8,SPEED) BROWSE INCDIR(..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib;..\TimeOut) DEBUG OBJECTEXTEND PRINT(.\Listings\S_TouchKeyCFG.lst) OBJECT(.\Objects\S_TouchKeyCFG.obj)

@@ -1,10 +1,10 @@
-C51 COMPILER V9.59.0.0   SYSTEM                                                            12/01/2018 14:38:08 PAGE 1   
+C51 COMPILER V9.59.0.0   SYSTEM                                                            12/01/2018 15:37:34 PAGE 1   
 
 
 C51 COMPILER V9.59.0.0, COMPILATION OF MODULE SYSTEM
 OBJECT MODULE PLACED IN .\Objects\system.obj
 COMPILER INVOKED BY: E:\MDK\C51\BIN\C51.EXE ..\user\system.c OPTIMIZE(8,SPEED) BROWSE INCDIR(..\bsp;..\lib;..\TimeOut;..
-                    -\user;..\touch_lib) DEBUG OBJECTEXTEND PRINT(.\Listings\system.lst) OBJECT(.\Objects\system.obj)
+                    -\user;..\touch_lib;..\TimeOut) DEBUG OBJECTEXTEND PRINT(.\Listings\system.lst) OBJECT(.\Objects\system.obj)
 
 line level    source
 
@@ -12,76 +12,93 @@ line level    source
    2          
    3          unsigned int My_KeyValue;
    4          LINE_PARA_T Line_Para_t[LINE_NUM];
-   5          
-   6          void System_Init(void)
-   7          {
-   8   1              static unsigned char i;
-   9   1              TouchKeyInit();
-  10   1              for(i = 0;i < LINE_NUM;i ++)
-  11   1              {
-  12   2                      Line_Para_t[i].ID = i;
-  13   2                      Line_App_Init(&Line_Para_t[i]);
-  14   2              }
-  15   1              Line_Status(Line2,Line2_Hight);
-  16   1      }
-  17          
-  18          void Delay_Time(unsigned int Time)
-  19          {
-  20   1          static unsigned int i,j;
-  21   1          for(i = Time;i > 0 ; i --)
-  22   1          {
-  23   2              for(j = 200; j > 0 ;j --);
-  24   2          }
-  25   1      }
-  26          
-  27          void System_Handle(void)
-  28          {
-  29   1          #if 0
-                  static unsigned int Cnt;
-                  ++ Cnt;
-                  if(Cnt & 0x01)
-                  {
-                     Line_Status(Line1,Line1_Hight); 
-                     Delay_Time(1000);
-                  }
-                  else 
-                  {
-                     Line_Status(Line1,Line1_Low);
-                     Delay_Time(1000);        
-                  }
-                  #endif
-  43   1              if(SOCAPI_TouchKeyStatus&0x80)
-  44   1              {
-  45   2                      SOCAPI_TouchKeyStatus &=0x7f;  // 重要步骤  3:  清除标志位， 需要外部清除。
-  46   2              My_KeyValue = TouchKeyScan();
-  47   2                      switch (My_KeyValue)
-  48   2                      {
-  49   3                              case 0x0002:
-  50   3                                            Line_Status(Line2,Line2_Low);
-  51   3                                                break;
-  52   3                              case 0x0040:
-  53   3                                                Line_Status(Line2,Line2_Low);
-  54   3                                                break;
-C51 COMPILER V9.59.0.0   SYSTEM                                                            12/01/2018 14:38:08 PAGE 2   
+   5          TIMEOUT_PARA TimeOut_Para[2];
+   6          
+   7          void System_Init(void)
+   8          {
+   9   1              static unsigned char i;
+  10   1          TimeOutDet_Init();
+  11   1              TouchKeyInit();
+  12   1              for(i = 0;i < LINE_NUM;i ++)
+  13   1              {
+  14   2                      Line_Para_t[i].ID = i;
+  15   2                      Line_App_Init(&Line_Para_t[i]);
+  16   2              }
+  17   1              Line_Status(Line2,Line2_Hight);
+  18   1          Timer_Init();
+  19   1      }
+  20          
+  21          void System_Handle(void)
+  22          {
+  23   1          static unsigned int Cnt;
+  24   1              if(SOCAPI_TouchKeyStatus&0x80)
+  25   1              {
+  26   2                      SOCAPI_TouchKeyStatus &=0x7f;  // 重要步骤  3:  清除标志位， 需要外部清除。
+  27   2              My_KeyValue = TouchKeyScan();
+  28   2                      switch (My_KeyValue)
+  29   2                      {
+  30   3                              case 0x0002:
+  31   3                                            Line_Status(Line2,Line2_Low);
+  32   3                                                break;
+  33   3                              case 0x0040:  
+  34   3                                                Line_Status(Line2,Line2_Low);
+  35   3                                                break;
+  36   3                              default:
+  37   3                                                Line_Status(Line2,Line2_Hight);
+  38   3                                                break;
+  39   3                      }
+  40   2                      TouchKeyRestart();
+  41   2              }
+  42   1              if(TimeOutDet_Check(&TimeOut_Para[0]))
+  43   1          {
+  44   2              TimeOut_Record(&TimeOut_Para[0],1000);
+  45   2              ++ Cnt;
+  46   2              if(Cnt & 0x01)
+  47   2              {
+  48   3                  Line_Status(Line1,Line1_Hight);
+  49   3              }
+  50   2              else
+  51   2              {
+  52   3                  Line_Status(Line1,Line1_Low);
+  53   3              }
+  54   2          }
+C51 COMPILER V9.59.0.0   SYSTEM                                                            12/01/2018 15:37:34 PAGE 2   
 
-  55   3                              default:
-  56   3                                                Line_Status(Line2,Line2_Hight);
-  57   3                                                break;
-  58   3                      }
-  59   2                      TouchKeyRestart();
-  60   2              }
-  61   1              
-  62   1      }
-  63          
-  64          
+  55   1      }
+  56          
+  57          /**************************************************
+  58          *函数名称：void timer0/1/2() interrupt 1/3/5
+  59          *函数功能：定时器中断产生方波
+  60          *入口参数：void
+  61          *出口参数：void
+  62          **************************************************/
+  63          void timer0() interrupt 1
+  64          {
+  65   1          TL0 = (65536 - 16000)%256;
+  66   1              TH0 = (65536 - 16000)/256;
+  67   1              TimeOutDet_DecHandle(); 
+  68   1      }
+  69          
+  70          void timer1() interrupt 3
+  71          {
+  72   1              
+  73   1      }
+  74          
+  75          void Timer2Int(void) interrupt 5
+  76          {               
+  77   1              TF2 = 0;   //溢出清零
+  78   1         
+  79   1      }
+  80          
+  81          
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    138    ----
+   CODE SIZE        =    221    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =      9    ----
+   DATA SIZE        =     23    ----
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
 END OF MODULE INFORMATION.

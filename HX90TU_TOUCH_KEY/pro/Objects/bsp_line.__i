@@ -1,0 +1,1 @@
+"..\bsp\bsp_line.c" OPTIMIZE (8,SPEED) BROWSE INCDIR(..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib;..\TimeOut) DEBUG OBJECTEXTEND PRINT(.\Listings\bsp_line.lst) OBJECT(.\Objects\bsp_line.obj)

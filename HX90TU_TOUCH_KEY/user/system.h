@@ -5,6 +5,8 @@
 #include "S_TouchKeyCFG.h"
 #include "SensorMethod.h"
 #include "bsp_line.h"
+#include "TimeOut.h"
+#include "bsp_timer.h"
 
 
 
