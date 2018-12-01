@@ -39,6 +39,7 @@ void System_Handle(void)
 		}
 		TouchKeyRestart();
 	}
+	#if 0
 	if(TimeOutDet_Check(&TimeOut_Para[0]))
     {
         TimeOut_Record(&TimeOut_Para[0],1000);
@@ -52,6 +53,7 @@ void System_Handle(void)
             Line_Status(Line1,Line1_Low);
         }
     }
+	#endif
 }
 
 /**************************************************

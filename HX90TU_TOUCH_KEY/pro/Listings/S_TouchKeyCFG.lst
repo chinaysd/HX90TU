@@ -1,4 +1,4 @@
-C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 15:22:25 PAGE 1   
+C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 20:02:19 PAGE 1   
 
 
 C51 COMPILER V9.59.0.0, COMPILATION OF MODULE S_TOUCHKEYCFG
@@ -62,7 +62,7 @@ line level    source
   51          extern  bit bMultiple;  //多按键标志    
   52          extern  bit GetIsNeedUpdateBaseline(void);
   53          extern  void SetNeedUpdateBaseline(void);
-C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 15:22:25 PAGE 2   
+C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 20:02:19 PAGE 2   
 
   54          extern  unsigned  int SensorKeyFlag(void);
   55          extern  void MultipleDeal(unsigned char CycleCnt);
@@ -126,7 +126,7 @@ line level    source
  113          // 输入: 无
  114          // 输出: 
  115          // 备注: 
-C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 15:22:25 PAGE 3   
+C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 20:02:19 PAGE 3   
 
  116          //************************************************************************
  117          char GetCsFunction(void)
@@ -190,7 +190,7 @@ line level    source
  175   1      }
  176          
  177          //************************************************************************
-C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 15:22:25 PAGE 4   
+C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 20:02:19 PAGE 4   
 
  178          //函数功能:获取按键抑制确认次数
  179          //输入: 无 
@@ -254,7 +254,7 @@ line level    source
  237          // 函数名       ：void TouchKeyCFGInit(void)
  238          // 作者         ：
  239          // 功能         ：初始化TK 寄存器等
-C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 15:22:25 PAGE 5   
+C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 20:02:19 PAGE 5   
 
  240          // 参数         ：无
  241          // 返回值       ：无
@@ -318,7 +318,7 @@ line level    source
                                               #endif  
  300   4                              }                       
  301   3                      }                       
-C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 15:22:25 PAGE 6   
+C51 COMPILER V9.59.0.0   S_TOUCHKEYCFG                                                     12/01/2018 20:02:19 PAGE 6   
 
  302   2      
  303   2                      if(bMultiple == 0)                                                      //进入按键判断

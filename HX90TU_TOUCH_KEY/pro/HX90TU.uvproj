@@ -311,7 +311,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib</IncludePath>
+              <IncludePath>..\bsp;..\lib;..\TimeOut;..\user;..\touch_lib;..\TimeOut</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -403,10 +403,22 @@
               <FileType>1</FileType>
               <FilePath>..\bsp\bsp_line.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\bsp_timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>TimeOut</GroupName>
+          <Files>
+            <File>
+              <FileName>TimeOut.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\TimeOut\TimeOut.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>touch_lib</GroupName>

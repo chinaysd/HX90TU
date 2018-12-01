@@ -45,13 +45,13 @@
 //用户只需要设置实际使用的通道手指阈值，其余没用到的通道可以随机数; 
 
 #define			SOCAPI_KEY0_FINGER_THRESHOLD				1000 
-#define			SOCAPI_KEY1_FINGER_THRESHOLD				200//100//300//100
+#define			SOCAPI_KEY1_FINGER_THRESHOLD				50//300//100
 #define			SOCAPI_KEY2_FINGER_THRESHOLD				300
 #define			SOCAPI_KEY3_FINGER_THRESHOLD				350
 
 #define			SOCAPI_KEY4_FINGER_THRESHOLD				300 
 #define			SOCAPI_KEY5_FINGER_THRESHOLD				300
-#define			SOCAPI_KEY6_FINGER_THRESHOLD			    200//100//350	//300 
+#define			SOCAPI_KEY6_FINGER_THRESHOLD			    50//350	//300 
 #define			SOCAPI_KEY7_FINGER_THRESHOLD				1000
 
 #define			SOCAPI_KEY8_FINGER_THRESHOLD				1000
@@ -71,7 +71,7 @@
 //---------------------------------------------------------------------------
 //-------------------以下参数不允许用户修改----------------------------------
 #define 		SOCAPI_SET_UPDATE_SPEED						120		//白噪声下基线更新速度,设置范围0~255.默认120
-#define			SOCAPI_SET_KEY_CONTI_TIME					15000	//按键有效的最长输出时间,设置范围0~5000，默认1000，输出时间= 1000*单位每轮扫描时间（如10ms）=10S
+#define			SOCAPI_SET_KEY_CONTI_TIME					5000	//按键有效的最长输出时间,设置范围0~5000，默认1000，输出时间= 1000*单位每轮扫描时间（如10ms）=10S
 #define			SOCAPI_SET_SYNC_UPDATE						450		//动态更新基线的时间,设置范围0~1000，默认450
 #define			SOCAPI_INIT_AUTO_UPDATE_TIME				48		//初始化自动校准次数，设置范围0--100，默认48
 #define			SOCAPI_AUTO_UPDATE_TIME						2		//多键强制基线复位速度，设置范围2-5，默认2	如复位时间=2*8*每轮扫描时间（10ms）=80ms
