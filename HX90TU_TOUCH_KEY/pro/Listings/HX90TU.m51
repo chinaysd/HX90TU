@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    11/29/2018  17:03:37  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    12/01/2018  14:39:38  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
@@ -35,10 +35,10 @@ LINK MAP OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
             DATA    0008H     000CH     UNIT         _DATA_GROUP_
-            DATA    0014H     0005H     UNIT         ?DT?SYSTEM
-            DATA    0019H     0001H     UNIT         ?DT?SENSORMETHOD
-            IDATA   001AH     0001H     UNIT         ?ID?SENSORMETHOD
-                    001BH     0005H                  *** GAP ***
+            DATA    0014H     0009H     UNIT         ?DT?SYSTEM
+            DATA    001DH     0001H     UNIT         ?DT?SENSORMETHOD
+            IDATA   001EH     0001H     UNIT         ?ID?SENSORMETHOD
+                    001FH     0001H                  *** GAP ***
             BIT     0020H.0   0000H.2   UNIT         ?BI?SENSORMETHOD
                     0020H.2   0000H.6                *** GAP ***
             IDATA   0021H     0008H     UNIT         ?ID?S_TOUCHKEYCFG
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
             CODE    05A6H     00BEH     UNIT         ?PR?_FILTERDATADEAL?SENSORMETHOD
             CODE    0664H     00BEH     UNIT         ?PR?SENSORMETHOD
             CODE    0722H     00B4H     UNIT         ?PR?_MULTIPLEDEAL?SENSORMETHOD
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 2
 
 
             CODE    07D6H     008CH     UNIT         ?C_C51STARTUP
@@ -69,30 +69,31 @@ LINK MAP OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
             CODE    0969H     0037H     UNIT         ?PR?CURRENTSENSORCHOOSE?S_TOUCHKEYCFG
             CODE    09A0H     0036H     UNIT         ?PR?FILTERAVERGEDEAL?SENSORMETHOD
             CODE    09D6H     002EH     UNIT         ?PR?SYSTEM_INIT?SYSTEM
-            CODE    0A04H     002EH     UNIT         ?PR?SYSTEM_HANDLE?SYSTEM
-            CODE    0A32H     0026H     UNIT         ?PR?FILTERCOMMCODE?SENSORMETHOD
-            CODE    0A58H     0025H     UNIT         ?PR?SENSORKEYFLAG?SENSORMETHOD
-            CODE    0A7DH     0022H     UNIT         ?PR?_LINE_INIT?BSP_LINE
-            CODE    0A9FH     0021H     UNIT         ?PR?FILTERIIRINIT?SENSORMETHOD
-            CODE    0AC0H     0020H     UNIT         ?CO?S_TOUCHKEYCFG
-            CODE    0AE0H     001EH     UNIT         ?PR?_GETCURRFINGERVALUE?S_TOUCHKEYCFG
-            CODE    0AFEH     001EH     UNIT         ?PR?INITIALIZEBASELINES?SENSORMETHOD
-            CODE    0B1CH     0014H     UNIT         ?PR?TOUCHKEYCFGINIT?S_TOUCHKEYCFG
-            CODE    0B30H     0010H     UNIT         ?C_INITSEG
-            CODE    0B40H     000FH     UNIT         ?PR?_GETTKYZTHRESHOLD?S_TOUCHKEYCFG
-            CODE    0B4FH     000CH     UNIT         ?PR?_USDELAY?SENSORMETHOD
-            CODE    0B5BH     0008H     UNIT         ?PR?MAIN?MAIN
-            CODE    0B63H     0008H     UNIT         ?PR?GETUPCONFIRMCNT?S_TOUCHKEYCFG
-            CODE    0B6BH     0007H     UNIT         ?PR?_LINE_APP_INIT?BSP_LINE
-            CODE    0B72H     0007H     UNIT         ?PR?TOUCHKEYRESTART?SENSORMETHOD
-            CODE    0B79H     0005H     UNIT         ?PR?SETONEKEYPUSHRESETTIME?S_TOUCHKEYCFG
-            CODE    0B7EH     0005H     UNIT         ?PR?SETFLOWRESETTIME?S_TOUCHKEYCFG
-            CODE    0B83H     0005H     UNIT         ?PR?GETBASELINEUPDATETHRESHOLD?S_TOUCHKEYCFG
-            CODE    0B88H     0003H     UNIT         ?PR?GETINITAUTOUPDATETIME?S_TOUCHKEYCFG
-            CODE    0B8BH     0003H     UNIT         ?PR?GETCSFUNCTION?S_TOUCHKEYCFG
-            CODE    0B8EH     0003H     UNIT         ?PR?ISDOUBLEKEYORSLIDEKEY?S_TOUCHKEYCFG
-            CODE    0B91H     0003H     UNIT         ?PR?GETISNEEDUPDATEBASELINE?SENSORMETHOD
-            CODE    0B94H     0003H     UNIT         ?PR?SETNEEDUPDATEBASELINE?SENSORMETHOD
+            CODE    0A04H     002EH     UNIT         ?PR?_DELAY_TIME?SYSTEM
+            CODE    0A32H     002EH     UNIT         ?PR?SYSTEM_HANDLE?SYSTEM
+            CODE    0A60H     0026H     UNIT         ?PR?FILTERCOMMCODE?SENSORMETHOD
+            CODE    0A86H     0025H     UNIT         ?PR?SENSORKEYFLAG?SENSORMETHOD
+            CODE    0AABH     0022H     UNIT         ?PR?_LINE_INIT?BSP_LINE
+            CODE    0ACDH     0021H     UNIT         ?PR?FILTERIIRINIT?SENSORMETHOD
+            CODE    0AEEH     0020H     UNIT         ?CO?S_TOUCHKEYCFG
+            CODE    0B0EH     001EH     UNIT         ?PR?_GETCURRFINGERVALUE?S_TOUCHKEYCFG
+            CODE    0B2CH     001EH     UNIT         ?PR?INITIALIZEBASELINES?SENSORMETHOD
+            CODE    0B4AH     0014H     UNIT         ?PR?TOUCHKEYCFGINIT?S_TOUCHKEYCFG
+            CODE    0B5EH     0010H     UNIT         ?C_INITSEG
+            CODE    0B6EH     000FH     UNIT         ?PR?_GETTKYZTHRESHOLD?S_TOUCHKEYCFG
+            CODE    0B7DH     000CH     UNIT         ?PR?_USDELAY?SENSORMETHOD
+            CODE    0B89H     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    0B91H     0008H     UNIT         ?PR?GETUPCONFIRMCNT?S_TOUCHKEYCFG
+            CODE    0B99H     0007H     UNIT         ?PR?_LINE_APP_INIT?BSP_LINE
+            CODE    0BA0H     0007H     UNIT         ?PR?TOUCHKEYRESTART?SENSORMETHOD
+            CODE    0BA7H     0005H     UNIT         ?PR?SETONEKEYPUSHRESETTIME?S_TOUCHKEYCFG
+            CODE    0BACH     0005H     UNIT         ?PR?SETFLOWRESETTIME?S_TOUCHKEYCFG
+            CODE    0BB1H     0005H     UNIT         ?PR?GETBASELINEUPDATETHRESHOLD?S_TOUCHKEYCFG
+            CODE    0BB6H     0003H     UNIT         ?PR?GETINITAUTOUPDATETIME?S_TOUCHKEYCFG
+            CODE    0BB9H     0003H     UNIT         ?PR?GETCSFUNCTION?S_TOUCHKEYCFG
+            CODE    0BBCH     0003H     UNIT         ?PR?ISDOUBLEKEYORSLIDEKEY?S_TOUCHKEYCFG
+            CODE    0BBFH     0003H     UNIT         ?PR?GETISNEEDUPDATEBASELINE?SENSORMETHOD
+            CODE    0BC2H     0003H     UNIT         ?PR?SETNEEDUPDATEBASELINE?SENSORMETHOD
 
 
 
@@ -118,10 +119,10 @@ SEGMENT                                            DATA_GROUP
 ?PR?TOUCHKEYINIT?SENSORMETHOD                    -----    -----
   +--> ?PR?TOUCHKEYCFGINIT?S_TOUCHKEYCFG
   +--> ?PR?INITIALIZESENSORFLAG?SENSORMETHOD
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 3
+
+
   +--> ?PR?SENSORMETHOD
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 3
-
-
   +--> ?PR?FILTERAVERGEDEAL?SENSORMETHOD
   +--> ?PR?INITIALIZEBASELINES?SENSORMETHOD
 
@@ -178,10 +179,10 @@ SEGMENT                                            DATA_GROUP
   +--> ?PR?_GETCURRFINGERVALUE?S_TOUCHKEYCFG
   +--> ?PR?GETCSFUNCTION?S_TOUCHKEYCFG
   +--> ?PR?ISDOUBLEKEYORSLIDEKEY?S_TOUCHKEYCFG
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 4
+
+
   +--> ?PR?GETTKYZCNT?S_TOUCHKEYCFG
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 4
-
-
   +--> ?PR?_GETTKYZTHRESHOLD?S_TOUCHKEYCFG
   +--> ?PR?GETBASELINEUPDATETHRESHOLD?S_TOUC...
   +--> ?PR?SETFLOWRESETTIME?S_TOUCHKEYCFG
@@ -238,10 +239,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:07D6H         LINE#         133
   C:07D8H         LINE#         134
   C:07D9H         LINE#         135
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 5
+
+
   C:07DAH         LINE#         136
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 5
-
-
   C:07DCH         LINE#         185
   C:07DFH         LINE#         196
   -------         ENDMOD        ?C_STARTUP
@@ -253,18 +254,18 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   D:00A0H         PUBLIC        P2
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:0B5BH         PUBLIC        main
+  C:0B89H         PUBLIC        main
   D:0088H         PUBLIC        TCON
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          MAIN
-  C:0B5BH         LINE#         4
-  C:0B5BH         LINE#         5
-  C:0B5BH         LINE#         6
-  C:0B5EH         LINE#         7
-  C:0B5EH         LINE#         8
-  C:0B5EH         LINE#         9
-  C:0B61H         LINE#         10
+  C:0B89H         LINE#         4
+  C:0B89H         LINE#         5
+  C:0B89H         LINE#         6
+  C:0B8CH         LINE#         7
+  C:0B8CH         LINE#         8
+  C:0B8CH         LINE#         9
+  C:0B8FH         LINE#         10
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
@@ -277,9 +278,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:0088H         PUBLIC        TCON
-  C:0A04H         PUBLIC        System_Handle
-  D:0015H         PUBLIC        Line_Para_t
-  D:0017H         PUBLIC        My_KeyValue
+  C:0A32H         PUBLIC        System_Handle
+  D:0019H         PUBLIC        Line_Para_t
+  D:001BH         PUBLIC        My_KeyValue
+  C:0A04H         PUBLIC        _Delay_Time
   D:00C8H         PUBLIC        T2CON
   D:00D0H         PUBLIC        PSW
   -------         PROC          SYSTEM_INIT
@@ -296,40 +298,54 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:09F9H         LINE#         14
   C:09FDH         LINE#         15
   -------         ENDPROC       SYSTEM_INIT
-  -------         PROC          SYSTEM_HANDLE
+  -------         PROC          _DELAY_TIME
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 6
+
+
+  D:0006H         SYMBOL        Time
+  -------         DO            
+  D:0015H         SYMBOL        i
+  D:0017H         SYMBOL        j
+  -------         ENDDO         
   C:0A04H         LINE#         18
   C:0A04H         LINE#         19
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 6
-
-
-  C:0A04H         LINE#         20
-  C:0A0BH         LINE#         21
-  C:0A0BH         LINE#         22
-  C:0A0EH         LINE#         23
-  C:0A15H         LINE#         24
-  C:0A23H         LINE#         25
-  C:0A23H         LINE#         26
-  C:0A23H         LINE#         28
-  C:0A23H         LINE#         29
-  C:0A23H         LINE#         30
-  C:0A25H         LINE#         32
-  C:0A27H         LINE#         33
-  C:0A27H         LINE#         34
-  C:0A2EH         LINE#         35
-  C:0A2EH         LINE#         36
-  C:0A2EH         LINE#         37
-  C:0A31H         LINE#         38
-  C:0A31H         LINE#         40
+  C:0A04H         LINE#         21
+  C:0A13H         LINE#         22
+  C:0A13H         LINE#         23
+  C:0A27H         LINE#         24
+  C:0A31H         LINE#         25
+  -------         ENDPROC       _DELAY_TIME
+  -------         PROC          SYSTEM_HANDLE
+  C:0A32H         LINE#         27
+  C:0A32H         LINE#         28
+  C:0A32H         LINE#         43
+  C:0A39H         LINE#         44
+  C:0A39H         LINE#         45
+  C:0A3CH         LINE#         46
+  C:0A43H         LINE#         47
+  C:0A51H         LINE#         48
+  C:0A51H         LINE#         49
+  C:0A51H         LINE#         50
+  C:0A51H         LINE#         51
+  C:0A51H         LINE#         52
+  C:0A53H         LINE#         54
+  C:0A55H         LINE#         55
+  C:0A55H         LINE#         56
+  C:0A5CH         LINE#         57
+  C:0A5CH         LINE#         58
+  C:0A5CH         LINE#         59
+  C:0A5FH         LINE#         60
+  C:0A5FH         LINE#         62
   -------         ENDPROC       SYSTEM_HANDLE
   -------         ENDMOD        SYSTEM
 
   -------         MODULE        BSP_LINE
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
-  C:0A7DH         PUBLIC        _Line_Init
+  C:0AABH         PUBLIC        _Line_Init
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
-  C:0B6BH         PUBLIC        _Line_App_Init
+  C:0B99H         PUBLIC        _Line_App_Init
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:0092H         PUBLIC        P1PH
@@ -343,33 +359,33 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:08D0H         PUBLIC        _Line_Status
   D:00D0H         PUBLIC        PSW
   -------         PROC          _LINE_INIT
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 7
+
+
   D:0007H         SYMBOL        ID
-  C:0A7DH         LINE#         3
-  C:0A7DH         LINE#         4
-  C:0A7DH         LINE#         5
-  C:0A83H         LINE#         6
-  C:0A83H         LINE#         7
-  C:0A86H         LINE#         8
-  C:0A89H         LINE#         9
-  C:0A8BH         LINE#         10
-  C:0A91H         LINE#         11
-  C:0A91H         LINE#         12
-  C:0A94H         LINE#         13
-  C:0A97H         LINE#         14
-  C:0A99H         LINE#         16
-  C:0A99H         LINE#         17
-  C:0A9CH         LINE#         18
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 7
-
-
-  C:0A9CH         LINE#         19
-  C:0A9EH         LINE#         20
+  C:0AABH         LINE#         3
+  C:0AABH         LINE#         4
+  C:0AABH         LINE#         5
+  C:0AB1H         LINE#         6
+  C:0AB1H         LINE#         7
+  C:0AB4H         LINE#         8
+  C:0AB7H         LINE#         9
+  C:0AB9H         LINE#         10
+  C:0ABFH         LINE#         11
+  C:0ABFH         LINE#         12
+  C:0AC2H         LINE#         13
+  C:0AC5H         LINE#         14
+  C:0AC7H         LINE#         16
+  C:0AC7H         LINE#         17
+  C:0ACAH         LINE#         18
+  C:0ACAH         LINE#         19
+  C:0ACCH         LINE#         20
   -------         ENDPROC       _LINE_INIT
   -------         PROC          _LINE_APP_INIT
   D:0001H         SYMBOL        p
-  C:0B6BH         LINE#         22
-  C:0B6BH         LINE#         23
-  C:0B6BH         LINE#         25
+  C:0B99H         LINE#         22
+  C:0B99H         LINE#         23
+  C:0B99H         LINE#         25
   -------         ENDPROC       _LINE_APP_INIT
   -------         PROC          _LINE_STATUS
   D:0007H         SYMBOL        ID
@@ -403,6 +419,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0926H         LINE#         55
   C:0926H         LINE#         56
   C:0928H         LINE#         57
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 8
+
+
   C:0928H         LINE#         58
   -------         ENDPROC       _LINE_STATUS
   -------         ENDMOD        BSP_LINE
@@ -412,90 +431,87 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   D:00E8H         PUBLIC        TKCON
   X:0000H         PUBLIC        ConfirmTouchCnt
   X:0001H         PUBLIC        BaseLine
-  C:0B1CH         PUBLIC        TouchKeyCFGInit
+  C:0B4AH         PUBLIC        TouchKeyCFGInit
   B:00D0H.7       PUBLIC        CY
-  C:0AE0H         PUBLIC        _GetCurrFingerValue
+  C:0B0EH         PUBLIC        _GetCurrFingerValue
   D:00E1H         PUBLIC        TKCFG0
   D:00E2H         PUBLIC        TKCFG1
-  C:0B8BH         PUBLIC        GetCsFunction
+  C:0BB9H         PUBLIC        GetCsFunction
   X:0005H         PUBLIC        CurrentChannel
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 8
-
-
   X:0007H         PUBLIC        RawData
-  C:0B8EH         PUBLIC        IsDoubleKeyOrSlideKey
+  C:0BBCH         PUBLIC        IsDoubleKeyOrSlideKey
   I:0021H         PUBLIC        TouchCnt
   I:0023H         PUBLIC        LowFingerDataCnt
-  C:0B79H         PUBLIC        SetOneKeyPushResetTime
+  C:0BA7H         PUBLIC        SetOneKeyPushResetTime
   C:03F0H         PUBLIC        TouchKeyScan
   C:0051H         PUBLIC        GetTKYzCnt
   X:000BH         PUBLIC        DifferAccum
   I:0025H         PUBLIC        RestAreaCnt
-  C:0B40H         PUBLIC        _GetTKYzThreshold
+  C:0B6EH         PUBLIC        _GetTKYzThreshold
   C:0969H         PUBLIC        CurrentSensorChoose
-  C:0B88H         PUBLIC        GetInitAutoUpdateTime
+  C:0BB6H         PUBLIC        GetInitAutoUpdateTime
   X:000FH         PUBLIC        MultipleLNum
   X:0011H         PUBLIC        SOCAPI_TouchKeyStatus
-  C:0B7EH         PUBLIC        SetFlowResetTime
-  C:0B63H         PUBLIC        GetUpConfirmCnt
+  C:0BACH         PUBLIC        SetFlowResetTime
+  C:0B91H         PUBLIC        GetUpConfirmCnt
   X:0012H         PUBLIC        UpdateBaseLNum
   X:0014H         PUBLIC        SetNoiseThreshold
-  C:0AC0H         PUBLIC        FingerThresholdtmp
-  C:0B83H         PUBLIC        GetBaselineUpdateThreshold
+  C:0AEEH         PUBLIC        FingerThresholdtmp
+  C:0BB1H         PUBLIC        GetBaselineUpdateThreshold
   X:0015H         PUBLIC        FilterData
   I:0027H         PUBLIC        NoTouchCnt
   D:00D0H         PUBLIC        PSW
   -------         PROC          SETONEKEYPUSHRESETTIME
-  C:0B79H         LINE#         71
-  C:0B79H         LINE#         72
-  C:0B79H         LINE#         73
-  C:0B7DH         LINE#         74
+  C:0BA7H         LINE#         71
+  C:0BA7H         LINE#         72
+  C:0BA7H         LINE#         73
+  C:0BABH         LINE#         74
   -------         ENDPROC       SETONEKEYPUSHRESETTIME
   -------         PROC          SETFLOWRESETTIME
-  C:0B7EH         LINE#         82
-  C:0B7EH         LINE#         83
-  C:0B7EH         LINE#         84
-  C:0B82H         LINE#         85
+  C:0BACH         LINE#         82
+  C:0BACH         LINE#         83
+  C:0BACH         LINE#         84
+  C:0BB0H         LINE#         85
   -------         ENDPROC       SETFLOWRESETTIME
   -------         PROC          GETBASELINEUPDATETHRESHOLD
-  C:0B83H         LINE#         95
-  C:0B83H         LINE#         96
-  C:0B83H         LINE#         97
-  C:0B87H         LINE#         98
+  C:0BB1H         LINE#         95
+  C:0BB1H         LINE#         96
+  C:0BB1H         LINE#         97
+  C:0BB5H         LINE#         98
   -------         ENDPROC       GETBASELINEUPDATETHRESHOLD
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 9
+
+
   -------         PROC          GETINITAUTOUPDATETIME
-  C:0B88H         LINE#         106
-  C:0B88H         LINE#         107
-  C:0B88H         LINE#         108
-  C:0B8AH         LINE#         109
+  C:0BB6H         LINE#         106
+  C:0BB6H         LINE#         107
+  C:0BB6H         LINE#         108
+  C:0BB8H         LINE#         109
   -------         ENDPROC       GETINITAUTOUPDATETIME
   -------         PROC          GETCSFUNCTION
-  C:0B8BH         LINE#         117
-  C:0B8BH         LINE#         118
-  C:0B8BH         LINE#         119
-  C:0B8DH         LINE#         120
+  C:0BB9H         LINE#         117
+  C:0BB9H         LINE#         118
+  C:0BB9H         LINE#         119
+  C:0BBBH         LINE#         120
   -------         ENDPROC       GETCSFUNCTION
   -------         PROC          _GETCURRFINGERVALUE
   D:0007H         SYMBOL        i
-  C:0AE0H         LINE#         146
-  C:0AE0H         LINE#         147
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 9
-
-
-  C:0AE0H         LINE#         148
-  C:0AFDH         LINE#         149
+  C:0B0EH         LINE#         146
+  C:0B0EH         LINE#         147
+  C:0B0EH         LINE#         148
+  C:0B2BH         LINE#         149
   -------         ENDPROC       _GETCURRFINGERVALUE
   -------         PROC          ISDOUBLEKEYORSLIDEKEY
-  C:0B8EH         LINE#         156
-  C:0B8EH         LINE#         157
-  C:0B8EH         LINE#         161
-  C:0B90H         LINE#         164
+  C:0BBCH         LINE#         156
+  C:0BBCH         LINE#         157
+  C:0BBCH         LINE#         161
+  C:0BBEH         LINE#         164
   -------         ENDPROC       ISDOUBLEKEYORSLIDEKEY
   -------         PROC          GETUPCONFIRMCNT
-  C:0B63H         LINE#         172
-  C:0B63H         LINE#         173
-  C:0B63H         LINE#         174
-  C:0B6AH         LINE#         175
+  C:0B91H         LINE#         172
+  C:0B91H         LINE#         173
+  C:0B91H         LINE#         174
+  C:0B98H         LINE#         175
   -------         ENDPROC       GETUPCONFIRMCNT
   -------         PROC          GETTKYZCNT
   C:0051H         LINE#         184
@@ -508,10 +524,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   -------         DO            
   D:0006H         SYMBOL        SetFingerThresholdtmp
   -------         ENDDO         
-  C:0B40H         LINE#         195
-  C:0B40H         LINE#         196
-  C:0B40H         LINE#         199
-  C:0B43H         LINE#         200
+  C:0B6EH         LINE#         195
+  C:0B6EH         LINE#         196
+  C:0B6EH         LINE#         199
+  C:0B71H         LINE#         200
   -------         ENDPROC       _GETTKYZTHRESHOLD
   -------         PROC          CURRENTSENSORCHOOSE
   -------         DO            
@@ -523,6 +539,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0969H         LINE#         215
   C:0969H         LINE#         217
   C:096BH         LINE#         220
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 10
+
+
   C:096EH         LINE#         222
   C:0979H         LINE#         223
   C:0979H         LINE#         224
@@ -538,17 +557,14 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:099FH         LINE#         234
   -------         ENDPROC       CURRENTSENSORCHOOSE
   -------         PROC          TOUCHKEYCFGINIT
-  C:0B1CH         LINE#         246
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 10
-
-
-  C:0B1CH         LINE#         247
-  C:0B1CH         LINE#         248
-  C:0B1FH         LINE#         249
-  C:0B22H         LINE#         250
-  C:0B25H         LINE#         251
-  C:0B28H         LINE#         252
-  C:0B2FH         LINE#         253
+  C:0B4AH         LINE#         246
+  C:0B4AH         LINE#         247
+  C:0B4AH         LINE#         248
+  C:0B4DH         LINE#         249
+  C:0B50H         LINE#         250
+  C:0B53H         LINE#         251
+  C:0B56H         LINE#         252
+  C:0B5DH         LINE#         253
   -------         ENDPROC       TOUCHKEYCFGINIT
   -------         PROC          TOUCHKEYSCAN
   -------         DO            
@@ -583,6 +599,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:045AH         LINE#         296
   C:045AH         LINE#         300
   C:045AH         LINE#         301
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 11
+
+
   C:045AH         LINE#         303
   C:045DH         LINE#         304
   C:045DH         LINE#         305
@@ -599,9 +618,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:048FH         LINE#         319
   C:048FH         LINE#         321
   C:049FH         LINE#         322
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 11
-
-
   C:049FH         LINE#         323
   C:04A2H         LINE#         324
   C:04A9H         LINE#         325
@@ -632,18 +648,21 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   D:00A8H         PUBLIC        IE
   D:00FEH         PUBLIC        OPINX
   C:0929H         PUBLIC        InitializeSensorFlag
-  C:0B72H         PUBLIC        TouchKeyRestart
+  C:0BA0H         PUBLIC        TouchKeyRestart
   D:00E1H         PUBLIC        TKCFG0
-  C:0A58H         PUBLIC        SensorKeyFlag
+  C:0A86H         PUBLIC        SensorKeyFlag
   X:001BH         PUBLIC        KeyFlag
   X:001DH         PUBLIC        FlowFingerRoundCnt
   B:0090H.0       PUBLIC        P10
   C:0862H         PUBLIC        CTK_ISR
   B:0020H.0       PUBLIC        bMultiple
-  C:0AFEH         PUBLIC        InitializeBaselines
+  C:0B2CH         PUBLIC        InitializeBaselines
   B:00E8H.6       PUBLIC        TRIG
   X:001FH         PUBLIC        KeyMark
-  C:0B94H         PUBLIC        SetNeedUpdateBaseline
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 12
+
+
+  C:0BC2H         PUBLIC        SetNeedUpdateBaseline
   D:00A9H         PUBLIC        IE1
   C:09A0H         PUBLIC        FilterAvergeDeal
   X:0021H         PUBLIC        MultipleDealIndex
@@ -651,19 +670,16 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   B:0020H.1       PUBLIC        bNeedUpdate
   C:0003H         PUBLIC        TouchKeyInit
   C:0722H         PUBLIC        _MultipleDeal
-  I:001AH         PUBLIC        RawdataRatio
-  D:0019H         PUBLIC        CurrentChannelMax
-  C:0B4FH         PUBLIC        _Usdelay
+  I:001EH         PUBLIC        RawdataRatio
+  D:001DH         PUBLIC        CurrentChannelMax
+  C:0B7DH         PUBLIC        _Usdelay
   C:05A6H         PUBLIC        _FilterDataDeal
   D:0091H         PUBLIC        P1CON
   X:0022H         PUBLIC        CurrentIndex
-  C:0A9FH         PUBLIC        FilterIIRInit
-  C:0B91H         PUBLIC        GetIsNeedUpdateBaseline
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 12
-
-
+  C:0ACDH         PUBLIC        FilterIIRInit
+  C:0BBFH         PUBLIC        GetIsNeedUpdateBaseline
   X:0023H         PUBLIC        IsInNosicValue
-  C:0A32H         PUBLIC        FilterCommCode
+  C:0A60H         PUBLIC        FilterCommCode
   C:0664H         SYMBOL        Com0091
   C:0664H         SYMBOL        L?0146
   C:0672H         SYMBOL        L?0147
@@ -703,15 +719,18 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:071BH         SYMBOL        L?0181
   -------         PROC          COM0091
   -------         ENDPROC       COM0091
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 13
+
+
   -------         PROC          _USDELAY
   D:0006H         SYMBOL        delay
-  C:0B4FH         LINE#         115
-  C:0B4FH         LINE#         116
-  C:0B4FH         LINE#         117
-  C:0B53H         LINE#         118
-  C:0B53H         LINE#         119
-  C:0B58H         LINE#         120
-  C:0B5AH         LINE#         121
+  C:0B7DH         LINE#         115
+  C:0B7DH         LINE#         116
+  C:0B7DH         LINE#         117
+  C:0B81H         LINE#         118
+  C:0B81H         LINE#         119
+  C:0B86H         LINE#         120
+  C:0B88H         LINE#         121
   -------         ENDPROC       _USDELAY
   -------         PROC          CTK_ISR
   C:0862H         LINE#         132
@@ -719,9 +738,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0892H         LINE#         135
   C:0898H         LINE#         137
   C:089FH         LINE#         138
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 13
-
-
   C:089FH         LINE#         139
   C:08A1H         LINE#         140
   C:08A8H         LINE#         141
@@ -753,35 +769,35 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:004EH         LINE#         184
   -------         ENDPROC       TOUCHKEYINIT
   -------         PROC          TOUCHKEYRESTART
-  C:0B72H         LINE#         198
-  C:0B72H         LINE#         199
-  C:0B72H         LINE#         200
-  C:0B74H         LINE#         201
-  C:0B76H         LINE#         202
-  C:0B78H         LINE#         203
+  C:0BA0H         LINE#         198
+  C:0BA0H         LINE#         199
+  C:0BA0H         LINE#         200
+  C:0BA2H         LINE#         201
+  C:0BA4H         LINE#         202
+  C:0BA6H         LINE#         203
   -------         ENDPROC       TOUCHKEYRESTART
   -------         PROC          FILTERCOMMCODE
   -------         DO            
   D:0005H         SYMBOL        times
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 14
+
+
   -------         ENDDO         
-  C:0A32H         LINE#         215
-  C:0A32H         LINE#         216
-  C:0A32H         LINE#         217
-  C:0A34H         LINE#         218
-  C:0A3BH         LINE#         219
-  C:0A3EH         LINE#         220
-  C:0A45H         LINE#         221
-  C:0A45H         LINE#         222
-  C:0A4CH         LINE#         223
-  C:0A4FH         LINE#         224
-  C:0A50H         LINE#         225
-  C:0A56H         LINE#         226
-  C:0A57H         LINE#         229
+  C:0A60H         LINE#         215
+  C:0A60H         LINE#         216
+  C:0A60H         LINE#         217
+  C:0A62H         LINE#         218
+  C:0A69H         LINE#         219
+  C:0A6CH         LINE#         220
+  C:0A73H         LINE#         221
+  C:0A73H         LINE#         222
+  C:0A7AH         LINE#         223
+  C:0A7DH         LINE#         224
+  C:0A7EH         LINE#         225
+  C:0A84H         LINE#         226
+  C:0A85H         LINE#         229
   -------         ENDPROC       FILTERCOMMCODE
   -------         PROC          FILTERAVERGEDEAL
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 14
-
-
   -------         DO            
   D:0008H         SYMBOL        t
   D:0009H         SYMBOL        i
@@ -809,28 +825,31 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   -------         DO            
   D:0007H         SYMBOL        i
   -------         ENDDO         
-  C:0AFEH         LINE#         272
-  C:0AFEH         LINE#         273
-  C:0AFEH         LINE#         275
-  C:0B06H         LINE#         276
-  C:0B06H         LINE#         277
-  C:0B18H         LINE#         278
-  C:0B1BH         LINE#         279
+  C:0B2CH         LINE#         272
+  C:0B2CH         LINE#         273
+  C:0B2CH         LINE#         275
+  C:0B34H         LINE#         276
+  C:0B34H         LINE#         277
+  C:0B46H         LINE#         278
+  C:0B49H         LINE#         279
   -------         ENDPROC       INITIALIZEBASELINES
   -------         PROC          SENSORKEYFLAG
   -------         DO            
   D:000BH         SYMBOL        i
   -------         ENDDO         
-  C:0A58H         LINE#         290
-  C:0A58H         LINE#         291
-  C:0A58H         LINE#         294
-  C:0A5DH         LINE#         296
-  C:0A66H         LINE#         297
-  C:0A66H         LINE#         298
-  C:0A6BH         LINE#         299
-  C:0A70H         LINE#         300
-  C:0A74H         LINE#         301
-  C:0A7CH         LINE#         303
+  C:0A86H         LINE#         290
+  C:0A86H         LINE#         291
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 15
+
+
+  C:0A86H         LINE#         294
+  C:0A8BH         LINE#         296
+  C:0A94H         LINE#         297
+  C:0A94H         LINE#         298
+  C:0A99H         LINE#         299
+  C:0A9EH         LINE#         300
+  C:0AA2H         LINE#         301
+  C:0AAAH         LINE#         303
   -------         ENDPROC       SENSORKEYFLAG
   -------         PROC          _SENSORRENOVATE
   D:000CH         SYMBOL        i
@@ -839,9 +858,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   D:000FH         SYMBOL        result
   D:0010H         SYMBOL        j
   D:0011H         SYMBOL        RealConfirmTouchCnt
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 15
-
-
   D:0012H         SYMBOL        SetFingerThresholdtmp
   -------         ENDDO         
   C:005EH         LINE#         314
@@ -883,6 +899,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0113H         LINE#         364
   C:0113H         LINE#         365
   C:0116H         LINE#         367
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 16
+
+
   C:011CH         LINE#         368
   C:011CH         LINE#         369
   C:0123H         LINE#         370
@@ -899,9 +918,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0142H         LINE#         381
   C:0142H         LINE#         382
   C:0149H         LINE#         383
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 16
-
-
   C:0149H         LINE#         384
   C:014FH         LINE#         385
   C:014FH         LINE#         386
@@ -943,6 +959,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:01B1H         LINE#         427
   C:01B8H         LINE#         429
   C:01C0H         LINE#         430
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 17
+
+
   C:01C3H         LINE#         432
   C:01C4H         LINE#         435
   C:01C4H         LINE#         436
@@ -959,9 +978,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:01E3H         LINE#         449
   C:0208H         LINE#         450
   C:0208H         LINE#         451
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 17
-
-
   C:0215H         LINE#         452
   C:0215H         LINE#         453
   C:0220H         LINE#         454
@@ -1003,6 +1019,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:02F8H         LINE#         494
   C:030DH         LINE#         495
   C:030DH         LINE#         496
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 18
+
+
   C:0317H         LINE#         497
   C:0317H         LINE#         498
   C:031FH         LINE#         499
@@ -1019,9 +1038,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0351H         LINE#         510
   C:0353H         LINE#         511
   C:0355H         LINE#         513
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 18
-
-
   C:0355H         LINE#         514
   C:035FH         LINE#         515
   C:035FH         LINE#         516
@@ -1063,6 +1079,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:03E5H         LINE#         563
   C:03E5H         LINE#         564
   C:03E9H         LINE#         565
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 19
+
+
   C:03EDH         LINE#         566
   C:03EDH         LINE#         567
   C:03EFH         LINE#         568
@@ -1074,16 +1093,13 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   -------         DO            
   D:0007H         SYMBOL        i
   -------         ENDDO         
-  C:0A9FH         LINE#         582
-  C:0A9FH         LINE#         583
-  C:0A9FH         LINE#         585
-  C:0AA7H         LINE#         586
-  C:0AA7H         LINE#         587
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 19
-
-
-  C:0ABCH         LINE#         588
-  C:0ABFH         LINE#         589
+  C:0ACDH         LINE#         582
+  C:0ACDH         LINE#         583
+  C:0ACDH         LINE#         585
+  C:0AD5H         LINE#         586
+  C:0AD5H         LINE#         587
+  C:0AEAH         LINE#         588
+  C:0AEDH         LINE#         589
   -------         ENDPROC       FILTERIIRINIT
   -------         PROC          _FILTERDATADEAL
   D:000DH         SYMBOL        i
@@ -1110,19 +1126,22 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:0663H         LINE#         623
   -------         ENDPROC       _FILTERDATADEAL
   -------         PROC          GETISNEEDUPDATEBASELINE
-  C:0B91H         LINE#         637
-  C:0B91H         LINE#         638
-  C:0B91H         LINE#         639
-  C:0B93H         LINE#         640
+  C:0BBFH         LINE#         637
+  C:0BBFH         LINE#         638
+  C:0BBFH         LINE#         639
+  C:0BC1H         LINE#         640
   -------         ENDPROC       GETISNEEDUPDATEBASELINE
   -------         PROC          SETNEEDUPDATEBASELINE
-  C:0B94H         LINE#         642
-  C:0B94H         LINE#         643
-  C:0B94H         LINE#         644
-  C:0B96H         LINE#         646
+  C:0BC2H         LINE#         642
+  C:0BC2H         LINE#         643
+  C:0BC2H         LINE#         644
+  C:0BC4H         LINE#         646
   -------         ENDPROC       SETNEEDUPDATEBASELINE
   -------         PROC          INITIALIZESENSORFLAG
   -------         DO            
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 20
+
+
   D:0007H         SYMBOL        i
   -------         ENDDO         
   C:0929H         LINE#         658
@@ -1139,9 +1158,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:095BH         LINE#         672
   C:0961H         LINE#         673
   C:0968H         LINE#         674
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 20
-
-
   -------         ENDPROC       INITIALIZESENSORFLAG
   -------         PROC          _MULTIPLEDEAL
   D:000BH         SYMBOL        CycleCnt
@@ -1183,6 +1199,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:07B2H         LINE#         727
   C:07B4H         LINE#         728
   C:07B6H         LINE#         729
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  12/01/2018  14:39:38  PAGE 21
+
+
   C:07BCH         LINE#         730
   C:07C8H         LINE#         731
   C:07C8H         LINE#         732
@@ -1199,9 +1218,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   -------         MODULE        ?C?CLDPTR
   C:04CEH         PUBLIC        ?C?CLDPTR
   -------         ENDMOD        ?C?CLDPTR
-BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  11/29/2018  17:03:37  PAGE 21
-
-
 
   -------         MODULE        ?C?IMUL
   C:04E7H         PUBLIC        ?C?IMUL
@@ -1223,5 +1239,8 @@ SYMBOL TABLE OF MODULE:  .\Objects\HX90TU (?C_STARTUP)
   C:059AH         PUBLIC        ?C?OFFXADD
   -------         ENDMOD        ?C?OFFXADD
 
-Program Size: data=36.2 xdata=36 code=2967
-LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_TIME?SYSTEM
+
+Program Size: data=40.2 xdata=36 code=3013
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
