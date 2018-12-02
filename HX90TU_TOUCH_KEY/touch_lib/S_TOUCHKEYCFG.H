@@ -79,7 +79,7 @@
 #define			SOCAPI_INHIBITION_ZONE					    7		//抑制区间，设置范围5-10，默认7,即（7*10）%=70% ，连水时加大该参数
 #define  		SOCAPI_FINGER_MAX_VALUE						2000	//抗干扰消顶参数，默认2000
 #define			SOCAPI_SET_CS_FUNCTION						1		//0:表示不进行CS测试,1: 表示进行CS测试,默认0
-#define			SOCAPI_MAX_KEY_MUTIPLE						300		//多键干扰计数，达到计数值更新基线，默认300*单位每轮扫描时间（如10ms）=1.5S
+#define			SOCAPI_MAX_KEY_MUTIPLE						2000//300		//多键干扰计数，达到计数值更新基线，默认300*单位每轮扫描时间（如10ms）=1.5S
 
 #endif //__S_TOUCHKEYCFG_H__
 //===========================================================================
